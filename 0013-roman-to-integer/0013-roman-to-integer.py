@@ -10,14 +10,11 @@ class Solution(object):
             'M': 1000
         }
         
-        total = 0
-        n = len(s)
-        
+        n=len(s)
+        total=0
         for i in range(n):
-            
-            if i != n - 1 and roman_to_int[s[i]] < roman_to_int[s[i + 1]]:
-                total -= roman_to_int[s[i]]
+            if i != n-1 and roman_to_int[s[i]]<roman_to_int[s[i+1]]:
+                total-=roman_to_int[s[i]]
             else:
-                total += roman_to_int[s[i]]
-                
+                total+=roman_to_int[s[i]]
         return total
